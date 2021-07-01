@@ -2,14 +2,27 @@
 
 namespace Tests;
 
+use App\Game;
 use PHPUnit\Framework\TestCase;
-use App\BowlingKata;
 
 require __DIR__ . '/../vendor/autoload.php';
 
 class BowlingKataTest extends TestCase
 {
+    /** @test */
+    public function ShouldCreateNewGame()
+    {
+        $game = new Game();
+        $this->assertNotNull($game);
+    }
 
+    /** @test */
+    public function ShouldAddPinTotal()
+    {
+        $game = new Game();
+        $game->scoreRoll(0);
+        $this->assertEquals(0, $game->getScore());
+    }
 
 }
 
