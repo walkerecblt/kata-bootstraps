@@ -1,6 +1,6 @@
 <?php
 
-namespace swkberlin;
+namespace App;
 
 class Kata
 {
