@@ -4,13 +4,15 @@ namespace App;
 
 class Game
 {
+    private $score = 0 ;
 
-    public function scoreRoll(int $int)
+    public function scoreRoll(int $score)
     {
+        $this->score += $score;
     }
 
     public function getScore() : int
     {
-        return 0;
+        return $this->score;
     }
 }

@@ -24,6 +24,15 @@ class BowlingKataTest extends TestCase
         $this->assertEquals(0, $game->getScore());
     }
 
+    /** @test */
+    public function ShouldTallyFirstOpenFrame()
+    {
+        $game = new Game();
+        $game->scoreRoll(2 );
+        $game->scoreRoll(5 );
+        $this->assertEquals(7, $game->getScore());
+    }
+
 }
 
 
