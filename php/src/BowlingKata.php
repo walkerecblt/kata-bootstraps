@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Kata
+class BowlingKata
 {
 
 }
