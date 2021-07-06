@@ -14,9 +14,16 @@ class Game
 
     public function getScore() : int
     {
-        for (i = 0 ; i < count($this->rolls) ; ++i) {
-            if ($this->rolls[i])
+        for ($i = 0 ; i < count($this->rolls) ; $i++) {
+            if ($this->rolls[$i] == 10 && $i+1 < count($this->rolls)){
+                $this->score += 10;
+            }
+
+            if ($this->rolls[$i] == 10 && $i+2 < count($this->rolls)){
+                $this->score += 10;
+            }
         }
+
         foreach ($this->rolls as $roll) {
             if($roll == 10) {
                 $this->score
