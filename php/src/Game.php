@@ -10,9 +10,7 @@ class Game
 
     public function scoreRoll(int $score)
     {
-        if(!empty($this->frames[$this->currentFrame])){
-            $this->frames[$this->currentFrame] += $score;
-        }
+        $this->frames[] = $score;
         $this->score += $score;
     }
 
