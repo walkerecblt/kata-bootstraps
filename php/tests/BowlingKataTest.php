@@ -53,3 +53,12 @@ class BowlingKataTest extends TestCase
  * The score of a Strike is 10 plus the number of pins knocked down by the following two balls (in the next one or two frames - up to 30)
  * The score of a Spare is 10 plus the number of pins knocked down by the following roll (in teh next frame - up to 20)
  */
+
+/*
+
+||0|?|| = 0pts
+||2|5|| = 7pts
+||10|| = 10pts
+||10||10|| = (10+10) + 10 pts
+||5|5||5|?|| = ((5 + 5) + 5) + 5pts = 20pts
+ */
