@@ -33,6 +33,15 @@ class BowlingKataTest extends TestCase
         $this->assertEquals(7, $game->getScore());
     }
 
+    /** @test */
+    public function ShouldTallyTwoStrikes()
+    {
+        $game = new Game();
+        $game->scoreRoll(10);
+        $game->scoreRoll(10);
+        $this->assertEquals(30, $game->getScore());
+    }
+
 }
 
 

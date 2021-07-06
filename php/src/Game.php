@@ -5,6 +5,8 @@ namespace App;
 class Game
 {
     private $score = 0 ;
+    private $frames = [];
+    private $currentFrame = 0;
 
     public function scoreRoll(int $score)
     {
